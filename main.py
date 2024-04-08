@@ -1,9 +1,14 @@
 import streamlit as st
 import pandas as pd
-st.write('CMPD Traffic Stops')
+
+st.write('Mugilan Thiyagarajan was here')
+
 @st.cache_data
-def load_data(csv):
-    df = pd.read_csv(csv)
+def load_csv(csv_file):
+    df=pd.read_csv(csv_file)
     return df
-stops = load_data("data/Officer_Traffic_Stops.csv")
+
+
+
+stops=load_csv('Data/Officer_Traffic_Stops.csv')
 st.dataframe(stops)
